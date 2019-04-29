@@ -80,7 +80,7 @@ public class DemoResource
     public String getJson(@PathParam("param") String param, @PathParam("id") int id) throws Exception
     {
         List<String> res = SwappiData.getJsonFromAllServers("people", id);
-        String result = ("{\"status\":\""+gson.toJson(res)+"\"}");
+        String result = "" + gson.toJson(res);
         return result;
     }
 }
